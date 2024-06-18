@@ -1,7 +1,9 @@
+'use client'
 import styles from './styles.module.scss'
 import { Fragment, PropsWithChildren } from 'react'
 import { Header } from '@/widgets/Header/Header'
 import { Footer } from '@/widgets/Footer/Footer'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 type PageWrapperProps = {
   hideFooter?: boolean
@@ -16,7 +18,9 @@ export const PageWrapper = ({
   return (
     <Fragment>
       {!hideHeader && <Header />}
-      <main className={styles.wrapper}>{children}</main>
+      <main className={styles.wrapper}>
+        <ParallaxProvider>{children}</ParallaxProvider>
+      </main>
       {!hideFooter && <Footer />}
     </Fragment>
   )

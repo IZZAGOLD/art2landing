@@ -43,6 +43,9 @@
       ],
       "@ui/*": [
         "shared/ui/*"
+      ],
+      "@assets/*": [
+        "shared/ui/assets/*"
       ]
     }
   },

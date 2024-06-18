@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  position: relative;
+
+  .imageContainer {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+
+    }
+  }
+
+  @keyframes square-move {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+
+  .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+
+    position: fixed;
+    top: 50px;
+    animation: square-move 5s linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 90vh;
+
+    .content {
+      background-color: navajowhite;
+      width: 250px;
+      height: 250px;
+      color: black;
+    }
+  }
+
+
+}

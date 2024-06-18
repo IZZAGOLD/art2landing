@@ -1,81 +1,45 @@
 @import 'variables';
 
-.h1 {
-  font-size: 150px;
-  line-height: 110%;
-  font-weight: 600;
-
-  @media (max-width: $mq-tablet) {
-    font-size: 120px;
-  }
-
-  @media (min-width: $mq-mobile) and (max-width: $mq-tablet) {
-    font-size: 62px;
-  }
-
-  @media (max-width: $mq-mobile) {
-    font-size: 56px;
-  }
-}
-
-.h2 {
-  font-size: 52px;
-  line-height: 110%;
-
-  font-weight: 600;
-}
-
-.h3 {
+.h1, h1 {
   font-size: 44px;
-  line-height: 110%;
-  font-weight: 700;
+  line-height: 60px;
+  font-weight: 600;
 
-  @media (max-width: $mq-tablet) {
-    font-size: 36px;
-    line-height: 120%;
+  @media (max-width: $mq-tablet - 1) {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
   }
 }
 
-.h4 {
-  font-size: 28px;
-  line-height: 110%;
-  font-weight: 700;
-}
-
-.h5 {
-  font-size: 24px;
-  line-height: 120%;
+.h2, h2 {
+  font-size: 32px;
+  line-height: 38px;
   font-weight: 600;
 }
 
-.h6 {
-  font-size: 18px;
-  line-height: 120%;
+.h3, h3 {
+  font-size: 20px;
+  line-height: 24px;
   font-weight: 600;
 }
 
 .body1 {
-  font-size: 16px;
-  line-height: 160%;
+  font-size: 18px;
+  line-height: 32px;
   font-weight: 500;
 }
 
 .body2 {
   font-size: 16px;
-  line-height: 140%;
+  line-height: 20px;
   font-weight: 500;
 }
 
 .body3 {
   font-size: 14px;
-  line-height: 140%;
+  line-height: 18px;
   font-weight: 500;
-}
-
-.body4 {
-  font-size: 12px;
-  line-height: 140%;
-  font-weight: 600;
 }
 
 .h1,

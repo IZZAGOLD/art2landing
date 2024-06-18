@@ -1,0 +1,14 @@
+.wrapper {
+  padding-left: 40px;
+  padding-top: 47.5px;
+  padding-bottom: 47.5px;
+  cursor: pointer;
+
+  @media (min-width: 1920px) {
+    padding-left: 80px;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 16px;
+  }
+}
