@@ -6,6 +6,10 @@ import { SectionOpinion } from '@/entities/PageHome/SectionOpinion/SectionOpinio
 import { SectionMission } from '@/entities/PageHome/SectionMission/SectionMission'
 import { SectionFeedBack } from '@/entities/PageHome/SectionFeedBack/SectionFeedBack'
 import { GallerySlider } from '@ui/GallerySlider/GallerySlider'
+import { ART_CARDS_DATA } from '@ui/ArtCard/index.artCards'
+import { ArtCard } from '@ui/ArtCard/ArtCard'
+import { WHY_ART_SQRD_CARDS_DATA } from '@ui/WhyArtSqrdCard/index.whyArtSqrdCard'
+import { WhyArtSqrdCard } from '@ui/WhyArtSqrdCard/WhyArtSqrdCard'
 
 export default function Home({ params }: LocaleProps) {
   unstable_setRequestLocale(params.locale)
@@ -18,6 +22,16 @@ export default function Home({ params }: LocaleProps) {
       <SectionFeedBack />
       <SectionOpinion />
 
+      <div>
+        {ART_CARDS_DATA.map((item, index) => {
+          return <ArtCard key={index} {...item} />
+        })}
+      </div>
+      <div>
+        {WHY_ART_SQRD_CARDS_DATA.map((item, index) => {
+          return <WhyArtSqrdCard key={index} {...item} />
+        })}
+      </div>
       {/*<SectionWhyArtSqrd />*/}
       {/*<SectionMarkets />*/}
       {/*<SectionCards />*/}

@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 28px;
+  border-radius: 30px;
+  border: 1px solid;
+  box-shadow: 0 0 40px 0 rgba(117, 154, 155, 0.24);
+  max-width: 445px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: inherit;
+
+    .dateWrapper {
+      padding: 10px 20px;
+      border-radius: 40px;
+      color: inherit;
+    }
+  }
+
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: inherit;
+  }
+
+  .imageContainer {
+    width: 100%;
+    //box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+    }
+  }
+}
