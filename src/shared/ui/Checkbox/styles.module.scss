@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  cursor: pointer;
+
+  .input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .checkbox {
+    display: inline-block;
+    width: 20px;
+    min-width: 16px;
+    height: 20px;
+    border: 1px solid var(--20);
+    border-radius: 6px;
+    margin-right: 12px;
+
+    &.active {
+      background: url("../assets/svg/checkbox_checked.svg");
+      border: none;
+    }
+  }
+}

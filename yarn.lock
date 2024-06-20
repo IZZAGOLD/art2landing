@@ -2956,6 +2956,11 @@ use-intl@^3.15.0:
     "@formatjs/ecma402-abstract" "^1.11.4"
     intl-messageformat "^10.5.11"
 
+use-media@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/use-media/-/use-media-1.5.0.tgz#7d023f04ab6a016e73175508c44ae2a8baddaa28"
+  integrity sha512-gEKsAwpqeejjLXllfQLlktok4CX3cpsS0TChDR9VTl3xQ/231jWujjebnJrt+IH50RRO163JPvHVKBj+W+Weqg==
+
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz#13757bc89b209b049fe5d86430e21cf40a89a8e6"

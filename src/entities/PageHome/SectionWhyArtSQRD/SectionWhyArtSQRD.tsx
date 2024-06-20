@@ -2,7 +2,7 @@
 import React from 'react'
 import styles from './styles.module.scss'
 import ExportedImage from 'next-image-export-optimizer'
-import vector from '@assets/img/vector.png'
+import vector from '@assets/img/vector.svg'
 
 export const SectionWhyArtSqrd = () => {
   return (
@@ -13,8 +13,6 @@ export const SectionWhyArtSqrd = () => {
       <div className={styles.imageContainer}>
         <ExportedImage className={styles.image} src={vector} alt={'vector'} />
       </div>
-
-      <div style={{ background: 'red', height: '500px' }}></div>
     </section>
   )
 }

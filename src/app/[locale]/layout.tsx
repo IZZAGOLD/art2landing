@@ -12,7 +12,7 @@ import {
 } from '@lib/internalization/types/types.internalization'
 import { SITE_DOMAIN, SITE_URL } from '@shared/appSettings/index.appSettings'
 import cl from 'classnames'
-import { fontRaleway } from '@styles/fonts'
+import { fontNothingYouCouldDo, fontRaleway } from '@styles/fonts'
 
 export function generateStaticParams() {
   return LOCALES_ARRAY.map((locale) => ({ locale }))
@@ -58,7 +58,9 @@ export default async function LocaleLayout({
       {/*  <AlternateLinks />*/}
       {/*</head>*/}
 
-      <body className={cl(fontRaleway.variable)}>
+      <body
+        className={cl(fontRaleway.variable, fontNothingYouCouldDo.variable)}
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

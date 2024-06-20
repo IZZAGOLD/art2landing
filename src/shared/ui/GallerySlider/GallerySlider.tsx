@@ -37,9 +37,6 @@ export const GallerySlider = () => {
       perView: 'auto',
       spacing: 16,
     },
-    loop: false,
-    mode: 'snap',
-    rtl: false,
   })
 
   return (
