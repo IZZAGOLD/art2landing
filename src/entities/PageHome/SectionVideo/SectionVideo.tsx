@@ -5,7 +5,7 @@ export const SectionVideo = () => {
   return (
     <section className={cn(styles.wrapper, 'section')}>
       <video loop autoPlay muted playsInline>
-        <source />
+        <source src={'./video2.mov'} />
       </video>
     </section>
   )
