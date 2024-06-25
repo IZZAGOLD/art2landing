@@ -24,5 +24,10 @@
     background-color: var(--pink-2);
     padding: 11px 28px;
     color: var(--20);
+    transition: all .3s ease-in;
+
+    &:hover {
+      background-color: var(--pink-1);
+    }
   }
 }

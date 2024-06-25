@@ -6,6 +6,7 @@ import { IconArrowUp } from '@ui/icons/Icon.ArrowUp'
 import ExportedImage from 'next-image-export-optimizer'
 import star from '@assets/img/simple_star.png'
 import flower from '@assets/img/flower.png'
+import { GOOGLE_FORM_URL } from '@shared/appSettings/index.appSettings'
 
 export const SectionOpinion = () => {
   const t = useTranslations()
@@ -21,7 +22,7 @@ export const SectionOpinion = () => {
       </h2>
       <a
         className={styles.linkButton}
-        href={'https://google.com'}
+        href={GOOGLE_FORM_URL}
         target={'_blank'}
         rel='noreferrer'
       >

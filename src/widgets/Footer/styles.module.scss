@@ -112,6 +112,10 @@
               color: var(--20);
               border-radius: 40px;
               background-color: var(--green-2);
+
+              &:hover {
+                border: 1px solid var(--green-4);
+              }
             }
           }
 

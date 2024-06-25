@@ -23,6 +23,11 @@
     color: var(--20);
     gap: 12px;
     background-color: var(--green-2);
+    transition: all .3s ease-in;
+    
+    &:hover {
+      background-color: var(--green-1);
+    }
   }
 
   .star {

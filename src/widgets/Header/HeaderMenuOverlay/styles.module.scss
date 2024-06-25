@@ -1,0 +1,95 @@
+@import "../../../app/styles/variables";
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: var(--80);
+  padding: 20px 20px 20px 20px;
+  position: fixed;
+  left: 0;
+  top: 69px;
+  z-index: 1000;
+  transition: opacity 200ms ease;
+  will-change: opacity;
+  box-sizing: border-box;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &__link {
+        color: var(--20);
+        transition: color .3s;
+
+        &:hover {
+          color: red
+        }
+      }
+    }
+  }
+
+
+  .loginWrapper {
+    display: none;
+    margin-top: 40px;
+
+    @media (max-width: $mq-tablet - 1) {
+      display: block;
+    }
+
+    &__login {
+      @media (max-width: $mq-mobile) {
+        width: 100%;
+      }
+      color: var(--10);
+    }
+  }
+
+  .markets {
+    margin-top: 24px;
+    display: none;
+    gap: 8px;
+
+    @media (max-width: $mq-mobile) {
+      display: flex;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      background-color: var(--70);
+      border-radius: 10px;
+
+      a {
+        width: 100%;
+        background-color: var(--70);
+        border-radius: 10px;
+        padding: 12px 0;
+        gap: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--10);
+        transition: background-color, color .3s;
+
+        @media (max-width: $mq-mobile-sm) {
+          gap: 3px;
+        }
+
+        &:hover {
+          background-color: var(--60);
+        }
+      }
+    }
+  }
+}

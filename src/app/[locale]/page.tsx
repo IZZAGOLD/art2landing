@@ -18,23 +18,23 @@ export default function Home({ params }: LocaleProps) {
   return (
     <PageWrapper>
       {/*<SectionWhyArtSqrd />*/}
-      <SectionVideo />
       <SectionCoreIdea />
       <GallerySlider />
       <SectionMission />
-      <SectionFeedBack />
+      <SectionVideo />
+      {/*<SectionFeedBack />*/}
       <SectionOpinion />
 
-      <div>
-        {ART_CARDS_DATA.map((item, index) => {
-          return <ArtCard key={index} {...item} />
-        })}
-      </div>
-      <div>
-        {WHY_ART_SQRD_CARDS_DATA.map((item, index) => {
-          return <WhyArtSqrdCard key={index} {...item} />
-        })}
-      </div>
+      {/*<div>*/}
+      {/*  {ART_CARDS_DATA.map((item, index) => {*/}
+      {/*    return <ArtCard key={index} {...item} />*/}
+      {/*  })}*/}
+      {/*</div>*/}
+      {/*<div>*/}
+      {/*  {WHY_ART_SQRD_CARDS_DATA.map((item, index) => {*/}
+      {/*    return <WhyArtSqrdCard key={index} {...item} />*/}
+      {/*  })}*/}
+      {/*</div>*/}
 
       {/*<SectionMarkets />*/}
       {/*<SectionCards />*/}

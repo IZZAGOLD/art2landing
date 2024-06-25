@@ -31,7 +31,11 @@ export const Footer = () => {
           <div className={styles.body}>
             <div className={styles.socialWrapper}>
               <div className={styles.marketButtons}>
-                <a className={cn(styles.marketButton, styles.googlePlay)}>
+                <a
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                  className={cn(styles.marketButton, styles.googlePlay)}
+                >
                   <ExportedImage src={googlePlay} alt={'google play'} />
                   <svg width='92' height='32' viewBox='0 0 92 32' fill='none'>
                     <path
@@ -44,7 +48,11 @@ export const Footer = () => {
                     />
                   </svg>
                 </a>
-                <a className={cn(styles.marketButton, styles.appStore)}>
+                <a
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                  className={cn(styles.marketButton, styles.appStore)}
+                >
                   <svg width='24' height='24' viewBox='0 0 24 24' fill='none'>
                     <path
                       d='M18.0341 11.1677C18.0561 9.54663 18.9733 8.01271 20.4283 7.16362C19.5104 5.91927 17.9729 5.13032 16.3733 5.08282C14.6672 4.91284 13.0132 6.05184 12.1438 6.05184C11.2576 6.05184 9.919 5.09969 8.47757 5.12784C6.59873 5.18546 4.84718 6.19938 3.93309 7.75851C1.96814 10.9876 3.43381 15.7333 5.31606 18.3435C6.25779 19.6216 7.3584 21.0493 8.79853 20.9987C10.2078 20.9432 10.7341 20.1457 12.4352 20.1457C14.1205 20.1457 14.6143 20.9987 16.0837 20.9665C17.5958 20.9432 18.5486 19.6827 19.4573 18.3925C20.1339 17.4818 20.6546 16.4752 21 15.4102C19.2229 14.6967 18.0361 12.9992 18.0341 11.1677Z'

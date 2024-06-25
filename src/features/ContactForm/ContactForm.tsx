@@ -31,7 +31,7 @@ export function ContactForm() {
 
   return (
     <form className={styles.wrapper} onSubmit={handleSubmit}>
-      <h2 className={styles.title}>{t('weWillAnswer')}</h2>
+      <h2>{t('weWillAnswer')}</h2>
       <div className={styles.inputs}>
         <Input
           value={name}

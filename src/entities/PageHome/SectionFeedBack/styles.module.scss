@@ -16,8 +16,11 @@
   }
 
   .cards {
+    display: flex;
+    gap: 16px;
 
     .card {
+      flex: 1;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -73,6 +76,7 @@
       }
 
       .footer {
+        margin-top: auto;
         display: flex;
         align-items: center;
         flex-direction: column;
