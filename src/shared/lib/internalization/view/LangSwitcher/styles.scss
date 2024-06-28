@@ -2,7 +2,8 @@
   position: relative;
   user-select: none;
   height: 44px;
-  z-index: 9999;
+  width: 44px;
+  z-index: 1000;
   cursor: pointer;
 
   .selected-text {

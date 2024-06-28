@@ -1,14 +1,48 @@
 .wrapper {
-  padding-left: 40px;
-  padding-top: 47.5px;
-  padding-bottom: 47.5px;
+  padding: 40px 0;
   cursor: pointer;
 
-  @media (min-width: 1920px) {
-    padding-left: 80px;
-  }
+  .notFoundWrapper {
+    padding: 33px;
+    min-width: 280px;
+    height: 435px;
+    border-radius: 200px;
+    border: 7px solid var(--green-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--green-4);
 
-  @media (max-width: 480px) {
-    padding-left: 16px;
+    .title {
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 60px;
+      font-family: var(--font-raleway);
+      color: var(--green-3);
+      text-align: center;
+    }
+
+    .linkButtonWrapper {
+      width: 100%;
+
+      .linkButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 28px;
+        padding: 11px 25px;
+        border: 3px solid var(--20);
+        color: var(--20);
+        gap: 12px;
+        background-color: var(--green-2);
+        transition: all .3s ease-in;
+
+        &:hover {
+          background-color: var(--green-1);
+        }
+      }
+    }
   }
 }

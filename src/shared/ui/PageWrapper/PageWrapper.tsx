@@ -2,8 +2,8 @@
 import styles from './styles.module.scss'
 import { Fragment, PropsWithChildren } from 'react'
 import { Header } from '@/widgets/Header/Header'
-import { ParallaxProvider } from 'react-scroll-parallax'
 import { Footer } from '@/widgets/Footer/Footer'
+import cn from 'classnames'
 
 type PageWrapperProps = {
   hideFooter?: boolean
@@ -18,8 +18,8 @@ export const PageWrapper = ({
   return (
     <Fragment>
       {!hideHeader && <Header />}
-      <main className={styles.wrapper}>
-        <ParallaxProvider>{children}</ParallaxProvider>
+      <main className={cn(styles.wrapper, !hideHeader && styles.withHeader)}>
+        {children}
       </main>
       {!hideFooter && <Footer />}
     </Fragment>

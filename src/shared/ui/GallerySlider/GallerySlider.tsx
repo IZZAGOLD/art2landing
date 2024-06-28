@@ -15,6 +15,8 @@ import twelve from '@assets/img/gallerySlider/12.png'
 import ExportedImage from 'next-image-export-optimizer'
 import cn from 'classnames'
 import styles from './styles.module.scss'
+import { IconArrowUp } from '@ui/icons/Icon.ArrowUp'
+import Link from 'next/link'
 
 const data = [
   one,
@@ -31,7 +33,11 @@ const data = [
   twelve,
 ]
 
-export const GallerySlider = () => {
+type GallerySliderProps = {
+  is404?: boolean
+}
+
+export const GallerySlider = ({ is404 }: GallerySliderProps) => {
   const [ref] = useKeenSlider<HTMLDivElement>({
     slides: {
       perView: 'auto',
@@ -46,6 +52,28 @@ export const GallerySlider = () => {
       style={{ maxWidth: 1920 }}
     >
       {data.map((item, index) => {
+        if (is404 && index === 0) {
+          return (
+            <div
+              style={{
+                maxWidth: 280,
+                minWidth: 280,
+              }}
+              key={'404'}
+              className={cn(styles.notFoundWrapper, 'keen-slider__slide')}
+            >
+              <h1 className={styles.title}>404</h1>
+              <span className={'body1'}>Page not found</span>
+              <div className={styles.linkButtonWrapper}>
+                <Link className={styles.linkButton} href={'/'}>
+                  <span className={'h4'}>Main</span>
+                  <IconArrowUp />
+                </Link>
+              </div>
+            </div>
+          )
+        }
+
         return (
           <div
             key={index}

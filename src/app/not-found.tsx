@@ -1,8 +1,15 @@
 'use client'
 import { useEffect, useState } from 'react'
 import cl from 'classnames'
-import { fontRaleway, fontRalewaySemiBold } from '@/app/styles/fonts'
+import cn from 'classnames'
+import { fontRaleway } from '@/app/styles/fonts'
 import { useGetLocalePrefixUrl } from '@lib/hooks/index.hooks'
+import '@/app/styles/app.scss'
+import styles from '@/app/styles/notFoundStyles.module.scss'
+import Link from 'next/link'
+import { IconLogo } from '@ui/icons/Icon.Logo'
+import { GallerySlider } from '@ui/GallerySlider/GallerySlider'
+import 'keen-slider/keen-slider.min.css'
 
 export default function NotFound() {
   const locale = useGetLocalePrefixUrl()
@@ -19,8 +26,20 @@ export default function NotFound() {
 
   return (
     <html lang={locale}>
-      <body className={cl(fontRalewaySemiBold.className, fontRaleway.variable)}>
-        <main className={'nonFound-container'}>404</main>
+      <body className={cl(fontRaleway.variable, styles.body)}>
+        <header className={styles.header}>
+          <div className={styles.content}>
+            <Link href={'/'}>
+              <IconLogo />
+            </Link>
+          </div>
+        </header>
+
+        <main className={styles.wrapper}>
+          <div className={cn(styles.sliderWrapper)}>
+            <GallerySlider is404 />
+          </div>
+        </main>
       </body>
     </html>
   )

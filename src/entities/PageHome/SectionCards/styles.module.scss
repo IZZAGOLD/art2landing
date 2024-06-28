@@ -1,7 +1,16 @@
 .wrapper {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  background-color: var(--green-3);
+  border-radius: 0 0 40px 40px;
+  justify-content: center;
+  display: flex;
+  top: -40px;
 
-  .card {
-    width: 320px;
-    height: 526px;
+  .cards {
+    display: flex;
+
   }
+
 }

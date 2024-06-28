@@ -2,16 +2,20 @@
 import './styles.scss'
 import { useEffect, useState } from 'react'
 import cn from 'classnames'
+import { Locales } from '@lib/internalization/types/types.internalization'
 
 type LangSwitcherProps = {
-  data: Array<string>
-  onClick: (option: string) => void
-  defaultValue: string
+  data: Array<Locales>
+  onClick: (locale: Locales) => void
+  defaultValue: Locales
+  className?: string
 }
+
 export const LangSwitcher = ({
   data,
   defaultValue,
   onClick,
+  className,
 }: LangSwitcherProps) => {
   const [isVisibleList, setIsVisibleList] = useState(false)
 
@@ -19,8 +23,8 @@ export const LangSwitcher = ({
     setIsVisibleList((prev) => !prev)
   }
 
-  function handleClickOutside(e) {
-    if (!e.target.closest('.custom-select-container')) {
+  function handleClickOutside(e: MouseEvent) {
+    if (!(e.target as Element).closest('.custom-select-container')) {
       setIsVisibleList(false)
     }
   }
@@ -31,7 +35,7 @@ export const LangSwitcher = ({
   }, [])
 
   return (
-    <div className={'custom-select-container'}>
+    <div className={cn('custom-select-container', className || '')}>
       <div
         className={isVisibleList ? 'selected-text active' : 'selected-text'}
         onClick={toggleIsVisibleList}

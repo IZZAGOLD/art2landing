@@ -3,7 +3,9 @@
   display: flex;
   justify-content: center;
   padding-top: 8px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 9998;
 
   .content {
     margin: 0 40px;
@@ -17,7 +19,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 1920px) {
+    @media (min-width: 1920px) {
       margin: 0 80px;
     }
 
@@ -74,6 +76,10 @@
           }
         }
       }
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
     }
 
     .buttons {
@@ -110,6 +116,27 @@
               border-color: var(--pink-1);
             }
           }
+        }
+      }
+
+      .buttonMenu {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background-color: var(--green-4);
+        color: var(--green-1);
+        border-radius: 40px;
+
+        @media (max-width: 1200px) {
+          display: flex;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .marketsButtons, .langSwitcher {
+          display: none;
         }
       }
     }

@@ -3,8 +3,7 @@ import styles from './styles.module.scss'
 import { SectionHeadingBlock } from '@ui/SectionHeadingBlock/SectionHeadingBlock'
 import { useTranslations } from 'next-intl'
 import cn from 'classnames'
-import ExportedImage from 'next-image-export-optimizer'
-import star from '@assets/img/star.png'
+import { GallerySlider } from '@ui/GallerySlider/GallerySlider'
 
 export const SectionCoreIdea = () => {
   const t = useTranslations()
@@ -22,7 +21,9 @@ export const SectionCoreIdea = () => {
         </span>
         {t('revealTheirIndividuality')}
       </h2>
-      <ExportedImage className={styles.image} src={star} alt={'star'} />
+      <GallerySlider />
+
+      {/*<ExportedImage className={styles.image} src={star} alt={'star'} />*/}
     </section>
   )
 }

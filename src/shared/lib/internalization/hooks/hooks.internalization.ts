@@ -3,7 +3,7 @@ import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from '@lib/internalization/index.nextIntl'
 import { useCallback } from 'react'
 
-export function useChangeLocale() {
+export function useChangeLocale(): [Locales, (locale: Locales) => void] {
   const pathname = usePathname()
   const locale = useLocale() as Locales
   const router = useRouter()

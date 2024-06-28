@@ -7,10 +7,14 @@ import styles from './styles.module.scss'
 import { IconArrowUp } from '@ui/icons/Icon.ArrowUp'
 import { Checkbox } from '@ui/Checkbox/Checkbox'
 import { Textarea } from '@ui/Textarea/Textarea'
+import { Link } from '@lib/internalization/index.nextIntl'
+import { ModalSuccessfullySubmitted } from '@ui/ModalSuccessfullySubmitted/ModalSuccessfullySumbitted'
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm('moqggkzl')
   const t = useTranslations()
+
+  const [isVisibleModal, setIsVisibleModal] = useState(false)
 
   const [isAgreed, setIsAgreed] = useState(false)
 
@@ -59,9 +63,9 @@ export function ContactForm() {
         label={
           <span className={'body2'}>
             {t('iAgreeTo')}{' '}
-            <span className={styles.processing}>
+            <Link href={'/documents'} className={styles.processing}>
               {t('processingPersonalData')}
-            </span>
+            </Link>
           </span>
         }
       />
@@ -76,6 +80,11 @@ export function ContactForm() {
         <span className={'h4'}>{t('send')}</span>
         <IconArrowUp />
       </button>
+
+      <ModalSuccessfullySubmitted
+        setIsOpen={setIsVisibleModal}
+        isOpen={isVisibleModal}
+      />
     </form>
   )
 }

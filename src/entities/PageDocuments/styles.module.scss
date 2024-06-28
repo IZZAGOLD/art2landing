@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  .content {
+    max-width: 1168px;
+    margin-top: 40px;
+
+    .accent {
+      color: var(--green-1);
+      margin-bottom: 12px;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  }
+}

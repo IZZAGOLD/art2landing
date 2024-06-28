@@ -11,6 +11,14 @@ import { IconInstagram } from '@ui/icons/socialMedia/Icon.Instagram'
 import { IconFb } from '@ui/icons/socialMedia/Icon.Fb'
 import { IconYoutube } from '@ui/icons/socialMedia/Icon.Youtube'
 import { useMedia } from 'use-media'
+import { Link } from '@lib/internalization/index.nextIntl'
+import {
+  APP_STORE_URL,
+  FACEBOOK_URL,
+  GOOGLE_PLAY_URL,
+  INSTAGRAM_URL,
+  YOUTUBE_URL,
+} from '@shared/appSettings/index.appSettings'
 
 export const Footer = () => {
   const t = useTranslations()
@@ -32,6 +40,7 @@ export const Footer = () => {
             <div className={styles.socialWrapper}>
               <div className={styles.marketButtons}>
                 <a
+                  href={GOOGLE_PLAY_URL}
                   target={'_blank'}
                   rel={'noreferrer'}
                   className={cn(styles.marketButton, styles.googlePlay)}
@@ -49,6 +58,7 @@ export const Footer = () => {
                   </svg>
                 </a>
                 <a
+                  href={APP_STORE_URL}
                   target={'_blank'}
                   rel={'noreferrer'}
                   className={cn(styles.marketButton, styles.appStore)}
@@ -79,6 +89,7 @@ export const Footer = () => {
 
               <div className={styles.socialButtons}>
                 <a
+                  href={INSTAGRAM_URL}
                   target={'_blank'}
                   rel='noreferrer'
                   className={styles.socialButton}
@@ -86,6 +97,7 @@ export const Footer = () => {
                   <IconInstagram />
                 </a>
                 <a
+                  href={FACEBOOK_URL}
                   target={'_blank'}
                   rel='noreferrer'
                   className={styles.socialButton}
@@ -93,6 +105,7 @@ export const Footer = () => {
                   <IconFb />
                 </a>
                 <a
+                  href={YOUTUBE_URL}
                   target={'_blank'}
                   rel='noreferrer'
                   className={styles.socialButton}
@@ -123,7 +136,9 @@ export const Footer = () => {
           </div>
 
           <div className={styles.footer}>
-            <a className={cn(styles.link, 'body3')}>{t('privacyPolicy')}</a>
+            <Link href={'/documents'} className={cn(styles.link, 'body3')}>
+              {t('privacyPolicy')}
+            </Link>
             <p className={'body3'}>{'© 2024 ART SQRD'}</p>
             <a
               target={'_blank'}

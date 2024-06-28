@@ -20,7 +20,7 @@ export const SectionFeedBack = () => {
       spacing: 16,
     },
   })
-  const isDesktop = useMedia({ minWidth: '1180px' })
+  const isDesktop = useMedia({ minWidth: '1366px' })
 
   return (
     <section className={cn(styles.wrapper, 'section')}>
@@ -38,7 +38,7 @@ export const SectionFeedBack = () => {
             maxWidth: 428,
             minWidth: 309.5,
           }}
-          className={cn('keen-slider__slide')}
+          className={cn(isDesktop ? '' : 'keen-slider__slide')}
         >
           <div className={cn(styles.card, styles.one)}>
             <IconComma />
@@ -57,7 +57,7 @@ export const SectionFeedBack = () => {
             maxWidth: 428,
             minWidth: 309.5,
           }}
-          className={cn('keen-slider__slide')}
+          className={cn(isDesktop ? '' : 'keen-slider__slide')}
         >
           <div className={cn(styles.card, styles.two)}>
             <IconComma />
@@ -76,7 +76,7 @@ export const SectionFeedBack = () => {
             maxWidth: 428,
             minWidth: 309.5,
           }}
-          className={cn('keen-slider__slide')}
+          className={cn(isDesktop ? '' : 'keen-slider__slide')}
         >
           <div className={cn(styles.card, styles.three)}>
             <IconComma />
@@ -97,7 +97,7 @@ export const SectionFeedBack = () => {
             maxWidth: 428,
             minWidth: 309.5,
           }}
-          className={cn('keen-slider__slide')}
+          className={cn(isDesktop ? '' : 'keen-slider__slide')}
         >
           <div className={cn(styles.card, styles.four)}>
             <IconComma />
