@@ -27,6 +27,29 @@
     }
   }
 
+  .mascotContainer {
+    position: absolute;
+    bottom: 4vw;
+    right: 0;
+    width: 30vw;
+    
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+
+    }
+  }
+
   @keyframes square-move {
     from {
       opacity: 1;

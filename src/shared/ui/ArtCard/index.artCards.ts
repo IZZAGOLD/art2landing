@@ -10,14 +10,6 @@ import { IconMagicPan } from '@ui/icons/Icon.MagicPan'
 
 export const ART_CARDS_DATA: Array<Omit<ArtCardProps, 'className'>> = [
   {
-    title: 'artBank',
-    description: 'artBankDescr',
-    Icon: Icon3DCube,
-    date: '01.09.2024',
-    img: fish,
-    coreColor: 'pink',
-  },
-  {
     title: 'internationalContest',
     description: 'internationalContestDescr',
     Icon: IconGlobe,
@@ -25,6 +17,15 @@ export const ART_CARDS_DATA: Array<Omit<ArtCardProps, 'className'>> = [
     img: bird,
     coreColor: 'green',
   },
+  {
+    title: 'artBank',
+    description: 'artBankDescr',
+    Icon: Icon3DCube,
+    date: '01.09.2024',
+    img: fish,
+    coreColor: 'pink',
+  },
+
   {
     title: 'drawingLessons',
     description: 'drawingLessonsDescr',

@@ -2,8 +2,9 @@
 import React from 'react'
 import styles from './styles.module.scss'
 import ExportedImage from 'next-image-export-optimizer'
-import backgroundDesktop from '@assets/img/screen_background_desktop.png'
+import backgroundDesktop from '@assets/img/screen_background_desktop.svg'
 import backgroundAdaptive from '@assets/img/screen_background_adaptive.png'
+import mascot from '@assets/img/mascot_header.png'
 import { useTranslations } from 'next-intl'
 import cn from 'classnames'
 import googlePlay from '@assets/svg/Svg.GooglePlay.svg'
@@ -85,8 +86,11 @@ export const SectionWhyArtSqrd = () => {
         <ExportedImage
           className={styles.image}
           src={isDesktop ? backgroundDesktop : backgroundAdaptive}
-          alt={'vector'}
+          alt={'background'}
         />
+      </div>
+      <div className={styles.mascotContainer}>
+        <ExportedImage className={styles.image} src={mascot} alt={'vector'} />
       </div>
     </section>
   )

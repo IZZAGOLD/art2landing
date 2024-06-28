@@ -5,6 +5,7 @@ import { ART_CARDS_DATA } from '@ui/ArtCard/index.artCards'
 import { ArtCard } from '@ui/ArtCard/ArtCard'
 import { useInView } from 'react-intersection-observer'
 import { animated, useSprings } from 'react-spring'
+import cn from 'classnames'
 
 export const SectionCards = () => {
   const [ref, inView] = useInView({
@@ -25,7 +26,10 @@ export const SectionCards = () => {
       <div className={styles.cards}>
         {springs.map((props, index) => (
           <animated.div style={props} key={index}>
-            <ArtCard {...ART_CARDS_DATA[index]} />
+            <ArtCard
+              className={cn(styles.card, styles[`card-${index + 1}`])}
+              {...ART_CARDS_DATA[index]}
+            />
           </animated.div>
         ))}
       </div>
