@@ -3,12 +3,10 @@
   flex-direction: column;
   padding: 24px;
   gap: 28px;
-  height: 100%;
   border-radius: 30px;
   border: 1px solid;
   box-shadow: 0 0 40px 0 rgba(117, 154, 155, 0.24);
   max-width: 445px;
-
 
   .header {
     display: flex;
@@ -32,7 +30,6 @@
 
   .imageContainer {
     width: 100%;
-    //box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
     > div {
       position: unset !important;

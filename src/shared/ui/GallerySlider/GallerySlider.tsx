@@ -83,7 +83,11 @@ export const GallerySlider = ({ is404 }: GallerySliderProps) => {
             }}
             className='keen-slider__slide'
           >
-            <ExportedImage src={item} alt={'gallery image'} />
+            <ExportedImage
+              className={styles.img}
+              src={item}
+              alt={'gallery image'}
+            />
           </div>
         )
       })}

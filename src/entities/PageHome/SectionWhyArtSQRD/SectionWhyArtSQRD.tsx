@@ -13,6 +13,7 @@ import {
   GOOGLE_PLAY_URL,
 } from '@shared/appSettings/index.appSettings'
 import { useMedia } from 'use-media'
+import { IconFigure } from '@ui/icons/Icon.Figure'
 
 export const SectionWhyArtSqrd = () => {
   const t = useTranslations()
@@ -23,7 +24,8 @@ export const SectionWhyArtSqrd = () => {
       <div className={styles.content}>
         <div className={styles.videoWrapper}>
           <video className={styles.video} loop autoPlay muted playsInline>
-            <source src={'./logo_video.mp4'} />
+            <source src={'./logo_video.mp4'} type='video/mp4' />
+            <source src={'./logo_video.webm'} type='video/webm' />
           </video>
         </div>
         <div className={styles.title}>
@@ -91,6 +93,10 @@ export const SectionWhyArtSqrd = () => {
       </div>
       <div className={styles.mascotContainer}>
         <ExportedImage className={styles.image} src={mascot} alt={'vector'} />
+      </div>
+
+      <div className={styles.figureWrapper}>
+        <IconFigure />
       </div>
     </section>
   )

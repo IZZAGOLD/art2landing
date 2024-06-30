@@ -66,6 +66,14 @@
         border-color: var(--yellow-3);
         color: var(--yellow-2);
 
+        @media (max-width: 1365px) {
+          margin-right: 40px;
+        }
+
+        @media (max-width: 480px) {
+          margin-right: 16px;
+        }
+
         &:hover {
           border-color: var(--yellow-2);
           background-color: var(--yellow-4);

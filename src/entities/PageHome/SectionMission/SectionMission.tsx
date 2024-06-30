@@ -5,6 +5,8 @@ import { SectionHeadingBlock } from '@ui/SectionHeadingBlock/SectionHeadingBlock
 import { useTranslations } from 'next-intl'
 import ExportedImage from 'next-image-export-optimizer'
 import image from '@assets/img/mission.png'
+import { IconHeart } from '@ui/icons/Icon.Heart'
+import { IconSimpleStar } from '@ui/icons/Icon.SimpleStar'
 
 export const SectionMission = () => {
   const t = useTranslations()
@@ -29,6 +31,9 @@ export const SectionMission = () => {
       <div className={styles.imageContainer}>
         <ExportedImage className={styles.image} src={image} alt={'missions'} />
       </div>
+
+      <IconHeart className={styles.heart} />
+      <IconSimpleStar className={styles.star} />
     </section>
   )
 }

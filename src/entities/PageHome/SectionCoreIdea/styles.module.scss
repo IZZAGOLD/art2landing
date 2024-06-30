@@ -18,6 +18,16 @@
     }
   }
 
+  .star {
+    position: absolute;
+    left: 15%;
+    top: 5%;
+
+    @media (max-width: 360px) {
+      left: 7%;
+    }
+  }
+
   .image {
     position: absolute;
     bottom: 20px;
@@ -36,6 +46,5 @@
 
   @media (max-width: 480px) {
     margin: 60px 0;
-
   }
 }

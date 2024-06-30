@@ -1,16 +1,16 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
 import { LocaleProps } from '@lib/internalization/types/types.internalization'
 import { PageWrapper } from '@ui/PageWrapper/PageWrapper'
-import { SectionFeedBack } from '@/entities/PageHome/SectionFeedBack/SectionFeedBack'
-import { SectionWhyArtSqrd } from '@/entities/PageHome/SectionWhyArtSQRD/SectionWhyArtSQRD'
-import { SectionMission } from '@/entities/PageHome/SectionMission/SectionMission'
-import { SectionCoreIdea } from '@/entities/PageHome/SectionCoreIdea/SectionCoreIdea'
-import { SectionVideo } from '@/entities/PageHome/SectionVideo/SectionVideo'
-import { SectionOpinion } from '@/entities/PageHome/SectionOpinion/SectionOpinion'
-import { SectionCards } from '@/entities/PageHome/SectionCards/SectionCards'
 import { Metadata } from 'next'
 import { SITE_URL } from '@shared/appSettings/index.appSettings'
 import { Suspense } from 'react'
+import { SectionCoreIdea } from '@/entities/PageHome/SectionCoreIdea/SectionCoreIdea'
+import { SectionMission } from '@/entities/PageHome/SectionMission/SectionMission'
+import { SectionWhyArtSqrd } from '@/entities/PageHome/SectionWhyArtSQRD/SectionWhyArtSQRD'
+import { SectionCards } from '@/entities/PageHome/SectionCards/SectionCards'
+import { SectionVideo } from '@/entities/PageHome/SectionVideo/SectionVideo'
+import { SectionFeedBack } from '@/entities/PageHome/SectionFeedBack/SectionFeedBack'
+import { SectionOpinion } from '@/entities/PageHome/SectionOpinion/SectionOpinion'
 
 export async function generateMetadata({
   params: { locale },
@@ -42,12 +42,6 @@ export default function Home({ params }: LocaleProps) {
         <SectionFeedBack />
         <SectionOpinion />
       </Suspense>
-
-      {/*<div>*/}
-      {/*  {WHY_ART_SQRD_CARDS_DATA.map((item, index) => {*/}
-      {/*    return <WhyArtSqrdCard key={index} {...item} />*/}
-      {/*  })}*/}
-      {/*</div>*/}
     </PageWrapper>
   )
 }

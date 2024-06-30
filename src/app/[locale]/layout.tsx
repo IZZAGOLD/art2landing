@@ -13,6 +13,7 @@ import {
 import { SITE_DOMAIN, SITE_URL } from '@shared/appSettings/index.appSettings'
 import cl from 'classnames'
 import { fontNothingYouCouldDo, fontRaleway } from '@styles/fonts'
+import { AlternateLinks } from '@lib/AlternateLinks'
 
 export function generateStaticParams() {
   return LOCALES_ARRAY.map((locale) => ({ locale }))
@@ -53,7 +54,7 @@ export async function generateMetadata({
     },
     title: {
       template: `%s | ${SITE_DOMAIN}`,
-      default: t('metaTitle'),
+      default: `${t('metaTitle')} | ${SITE_DOMAIN}`,
     },
     alternates: {
       canonical: '/',
@@ -70,10 +71,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      {/*<head>*/}
-      {/*  <meta name='Last-Modified' content={`${new Date().toUTCString()}`} />*/}
-      {/*  <AlternateLinks />*/}
-      {/*</head>*/}
+      <head>
+        <meta name='Last-Modified' content={`${new Date().toUTCString()}`} />
+        <AlternateLinks />
+      </head>
 
       <body
         className={cl(fontRaleway.variable, fontNothingYouCouldDo.variable)}
