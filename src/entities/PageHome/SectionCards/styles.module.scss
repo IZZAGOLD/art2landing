@@ -33,6 +33,7 @@
 
     .card {
       position: relative;
+      transition: all .3s;
 
       &.card-1 {
         transform: rotate(-3deg);
@@ -41,6 +42,10 @@
         @media (max-width: 600px) {
           transform: none;
           bottom: 0;
+        }
+
+        &:hover {
+          transform: rotate(-5deg);
         }
       }
 
@@ -51,6 +56,10 @@
           transform: none;
           bottom: 0;
         }
+
+        &:hover {
+          transform: rotate(1deg);
+        }
       }
 
       &.card-3 {
@@ -60,6 +69,10 @@
           transform: none;
           bottom: 0;
         }
+
+        &:hover {
+          transform: rotate(-1deg);
+        }
       }
 
       &.card-4 {
@@ -68,6 +81,10 @@
         @media (max-width: 600px) {
           transform: none;
           bottom: 0;
+        }
+
+        &:hover {
+          transform: rotate(3deg);
         }
       }
     }
