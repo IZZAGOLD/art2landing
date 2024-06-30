@@ -36,7 +36,7 @@ export const HeaderMenuOverlay = ({ isVisible }: HeaderMenuOverlayProps) => {
         <ul className={styles.links}>
           {HEADER_NAV_DATA.map((item, index) => {
             return (
-              <li className={styles.link} key={index}>
+              <li key={index} className={styles.link}>
                 <Link href={item.href}>
                   <span className={'body2'}>{t(item.langKey)}</span>
                 </Link>

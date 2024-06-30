@@ -16,6 +16,11 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 50px);
+}
+
 main {
   width: 100%;
   display: flex;

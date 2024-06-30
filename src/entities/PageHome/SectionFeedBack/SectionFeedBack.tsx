@@ -23,7 +23,7 @@ export const SectionFeedBack = () => {
   const isDesktop = useMedia({ minWidth: '1366px' })
 
   return (
-    <section className={cn(styles.wrapper, 'section')}>
+    <section id={'feedback'} className={cn(styles.wrapper, 'section')}>
       <h2 className={cn(styles.title, 'h1')}>
         {`${t('parents')} `}
         <span style={{ color: 'var(--purple-1)' }}>{t('feedback')}</span>

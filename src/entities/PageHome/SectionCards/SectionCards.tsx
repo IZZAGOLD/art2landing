@@ -22,7 +22,7 @@ export const SectionCards = () => {
   )
 
   return (
-    <section className={styles.wrapper} ref={ref}>
+    <section id={'updates'} className={styles.wrapper} ref={ref}>
       <div className={styles.cards}>
         {springs.map((props, index) => (
           <animated.div style={props} key={index}>

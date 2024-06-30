@@ -9,7 +9,7 @@ import image from '@assets/img/mission.png'
 export const SectionMission = () => {
   const t = useTranslations()
   return (
-    <section className={cn(styles.wrapper, 'section')}>
+    <section id={'mission'} className={cn(styles.wrapper, 'section')}>
       <SectionHeadingBlock label={t('ourMission')} />
       <h2 className={cn(styles.title, 'h1')}>
         {`${t('showImportance')} `}

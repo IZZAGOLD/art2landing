@@ -34,9 +34,26 @@ export async function generateMetadata({
   const t = await getTranslations({ locale })
   return {
     metadataBase: new URL(SITE_URL),
+    description: t('metaDescription'),
+    openGraph: {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      type: 'website',
+      url: `/${locale}`,
+      locale: `${locale}`,
+      siteName: SITE_DOMAIN,
+      images: [
+        {
+          url: `${SITE_URL}/icon.png`,
+          width: 512,
+          height: 512,
+          alt: 'logo',
+        },
+      ],
+    },
     title: {
       template: `%s | ${SITE_DOMAIN}`,
-      default: 'Example',
+      default: t('metaTitle'),
     },
     alternates: {
       canonical: '/',

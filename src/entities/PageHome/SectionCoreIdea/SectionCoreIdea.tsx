@@ -8,7 +8,7 @@ import { GallerySlider } from '@ui/GallerySlider/GallerySlider'
 export const SectionCoreIdea = () => {
   const t = useTranslations()
   return (
-    <section className={cn(styles.wrapper, 'section')}>
+    <section id={'gallery'} className={cn(styles.wrapper, 'section')}>
       <SectionHeadingBlock label={t('coreIdea')} />
       <h2 className={cn(styles.title, 'h1')}>
         {t('newWay')}

@@ -8,7 +8,8 @@ export const SectionVideo = () => {
     <section className={cn(styles.wrapper, 'section')}>
       <div className={styles.videoWrapper}>
         <video className={styles.video} loop autoPlay muted playsInline>
-          <source src={'./children_picture.mp4'} />
+          <source src={'./children_picture.mp4'} type='video/mp4' />
+          <source src={'./children_picture.webm'} type='video/webm' />
         </video>
         <div className={styles.titleWrapper}>
           <span className={'h4'}>{t('whyArtSQRD')}</span>

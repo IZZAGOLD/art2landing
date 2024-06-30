@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { FormEvent, useEffect, useState } from 'react'
 import { useForm } from '@formspree/react'
 import { Input } from '@ui/Input/Input'
 import { useTranslations } from 'next-intl'
@@ -9,9 +9,13 @@ import { Checkbox } from '@ui/Checkbox/Checkbox'
 import { Textarea } from '@ui/Textarea/Textarea'
 import { Link } from '@lib/internalization/index.nextIntl'
 import { ModalSuccessfullySubmitted } from '@ui/ModalSuccessfullySubmitted/ModalSuccessfullySumbitted'
+import cn from 'classnames'
+
+export const emailRegex =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 export function ContactForm() {
-  const [state, handleSubmit] = useForm('moqggkzl')
+  const [state, handleSubmit] = useForm('mldreero')
   const t = useTranslations()
 
   const [isVisibleModal, setIsVisibleModal] = useState(false)
@@ -27,14 +31,64 @@ export function ContactForm() {
   const [errors, setErrors] = useState({
     name: '',
     email: '',
+    message: '',
+    somethingWentWrong: '',
   })
 
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>
+  useEffect(() => {
+    if (!state.succeeded) return
+    setIsVisibleModal(true)
+    setErrors({
+      name: '',
+      email: '',
+      message: '',
+      somethingWentWrong: '',
+    })
+    setName('')
+    setIsAgreed(false)
+    setEmail('')
+    setMessage('')
+  }, [state.succeeded])
+
+  useEffect(() => {
+    if (!state.errors) return
+    setErrors((prev) => ({
+      ...prev,
+      somethingWentWrong: t('somethingWentWrong'),
+    }))
+  }, [state.errors, t])
+
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (
+      name.length > 3 &&
+      name.length < 50 &&
+      message.length > 3 &&
+      message.length < 1000 &&
+      isAgreed &&
+      emailRegex.test(email)
+    ) {
+      handleSubmit(e).catch(() => {})
+      return
+    }
+
+    const errors = {} as Record<string, string>
+
+    if (name.length < 3 || name.length > 50) {
+      errors.name = t('from3to50characters')
+    }
+    if (!emailRegex.test(email)) {
+      errors.email = t('incorrectEmail')
+      setErrors((prev) => ({ ...prev, email: t('incorrectEmail') }))
+    }
+    if (message.length < 3 || message.length > 1000) {
+      errors.message = t('from3to1000characters')
+    }
+    setErrors((prev) => ({ ...prev, ...errors }))
   }
 
   return (
-    <form className={styles.wrapper} onSubmit={handleSubmit}>
+    <form className={styles.wrapper} onSubmit={onSubmit}>
       <h2>{t('weWillAnswer')}</h2>
       <div className={styles.inputs}>
         <Input
@@ -42,6 +96,7 @@ export function ContactForm() {
           onChange={(e) => setName(e.target.value)}
           id='name'
           name='name'
+          errorText={errors.name}
           placeholder={t('yourName')}
         />
         <Input
@@ -49,9 +104,11 @@ export function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
           id='email'
           name='email'
+          errorText={errors.email}
           placeholder={'Email'}
         />
         <Textarea
+          errorText={errors.message}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder={t('yourMessage')}
@@ -63,14 +120,21 @@ export function ContactForm() {
         label={
           <span className={'body2'}>
             {t('iAgreeTo')}{' '}
-            <Link href={'/documents'} className={styles.processing}>
+            <Link
+              href={'/documents#personal-data'}
+              className={styles.processing}
+            >
               {t('processingPersonalData')}
             </Link>
           </span>
         }
       />
 
-      {/*<ValidationError prefix='Email' field='email' errors={state.errors} />*/}
+      {errors.somethingWentWrong && (
+        <span className={cn(styles.errorText, 'body3')}>
+          {errors.somethingWentWrong}
+        </span>
+      )}
 
       <button
         disabled={state.submitting}

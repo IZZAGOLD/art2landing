@@ -1,22 +1,22 @@
 export const HEADER_NAV_DATA = [
   {
     langKey: 'updates',
-    href: '/',
+    href: '/#updates',
   },
   {
     langKey: 'gallery',
-    href: '/',
+    href: '/#gallery',
   },
   {
     langKey: 'mission',
-    href: '/',
+    href: '/#mission',
   },
   {
     langKey: 'feedback',
-    href: '/',
+    href: '/#feedback',
   },
   {
     langKey: 'contacts',
-    href: '/',
+    href: '/#contacts',
   },
 ]

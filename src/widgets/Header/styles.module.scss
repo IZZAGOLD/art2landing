@@ -33,13 +33,18 @@
         gap: 4px;
 
         .link {
-          padding: 12px 28px;
           display: flex;
           justify-content: center;
           align-items: center;
           border-radius: 40px;
           transition: all .3s ease-in;
           cursor: pointer;
+
+          a {
+            width: 100%;
+            padding: 12px 28px;
+
+          }
 
           &:hover {
             color: var(--20);

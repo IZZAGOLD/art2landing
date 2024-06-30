@@ -11,7 +11,7 @@ import { GOOGLE_FORM_URL } from '@shared/appSettings/index.appSettings'
 export const SectionOpinion = () => {
   const t = useTranslations()
   return (
-    <section className={cn(styles.wrapper, 'section')}>
+    <section id={'contacts'} className={cn(styles.wrapper, 'section')}>
       <h2 className={cn(styles.title, 'h1')}>
         {`${t('opinion')} `}
         <span style={{ color: 'var(--pink-1)' }}>{t('opinion')}</span>

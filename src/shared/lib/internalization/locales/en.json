@@ -48,9 +48,15 @@
   "feedbackDescription4": "As a parent, I appreciate how this app fosters a sense of community through art among young artists. The contests provide a fun and friendly competition that pushes my son to improve his skills. The drawing of the day feature is a great way for him to see his work on display and feel proud of his creations.",
   "whyArtSQRD": "Why Art SQRD?",
   "metaTitle": "Art SQRD – Creative Children Community",
+  "metaDescription": "Unleash your creativity with mobile app Art SQRD. Participate in monthly kids drawing contests. Share your art with the whole world.",
   "creative": "creative",
   "children": "children",
   "community": "community",
   "weWillContact": "We will contact you asap",
-  "successfullySubmitted": "Your application has been successfully submitted!"
+  "successfullySubmitted": "Your application has been successfully submitted!",
+  "documents": "Documents",
+  "somethingWentWrong": "Sorry, something went wrong. Please try again later.",
+  "incorrectEmail": "Incorrect email",
+  "from3to50characters": "From 3 to 50 characters",
+  "from3to1000characters": "From 3 to 1000 characters"
 }

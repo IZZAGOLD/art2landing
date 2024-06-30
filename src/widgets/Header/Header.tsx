@@ -11,7 +11,7 @@ import { Locales } from '@lib/internalization/types/types.internalization'
 import { enumToArray } from '@lib/helpers/index.helpers'
 import { HEADER_NAV_DATA } from '@/widgets/Header/index.header'
 import { IconBurgerMenu } from '@ui/icons/Icon.BurgerMenu'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IconX } from '@ui/icons/Icon.X'
 import { HeaderMenuOverlay } from '@/widgets/Header/HeaderMenuOverlay/HeaderMenuOverlay'
 import {
@@ -23,9 +23,20 @@ export const Header = () => {
   const t = useTranslations()
   const [locale, setLocale] = useChangeLocale()
   const [isVisibleMenu, setIsVisibleMenu] = useState(false)
+
+  useEffect(() => {
+    const header = document.getElementById('header')
+    if (!header) return
+    const headerHeight = header.offsetHeight
+    document.documentElement.style.setProperty(
+      '--scroll-padding',
+      headerHeight + 1 + 'px'
+    )
+  }, [])
+
   return (
     <>
-      <header className={styles.wrapper}>
+      <header id={'header'} className={styles.wrapper}>
         <div className={styles.content}>
           <Link href={'/'}>
             <IconLogo />
