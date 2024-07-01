@@ -20,7 +20,7 @@ export const LangSwitcher = ({
   const [isVisibleList, setIsVisibleList] = useState(false)
 
   function toggleIsVisibleList() {
-    setIsVisibleList((prev) => !prev)
+    // setIsVisibleList((prev) => !prev)
   }
 
   function handleClickOutside(e: MouseEvent) {
