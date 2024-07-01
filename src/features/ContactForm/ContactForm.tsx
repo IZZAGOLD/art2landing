@@ -110,6 +110,8 @@ export function ContactForm() {
         <Textarea
           errorText={errors.message}
           value={message}
+          id='message'
+          name='message'
           onChange={(e) => setMessage(e.target.value)}
           placeholder={t('yourMessage')}
         />
