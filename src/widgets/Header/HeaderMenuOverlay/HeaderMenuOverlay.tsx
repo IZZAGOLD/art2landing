@@ -5,7 +5,7 @@ import cn from 'classnames'
 import styles from './styles.module.scss'
 import { Link } from '@lib/internalization/index.nextIntl'
 import { useTranslations } from 'next-intl'
-import { useEffect } from 'react'
+import { Dispatch, SetStateAction, useEffect } from 'react'
 import ExportedImage from 'next-image-export-optimizer'
 import googlePlay from '@assets/svg/Svg.GooglePlay.svg'
 import { LangSwitcher } from '@lib/internalization/view/LangSwitcher/LangSwitcher'
@@ -19,9 +19,13 @@ import {
 
 type HeaderMenuOverlayProps = {
   isVisible: boolean
+  setIsVisible: Dispatch<SetStateAction<boolean>>
 }
 
-export const HeaderMenuOverlay = ({ isVisible }: HeaderMenuOverlayProps) => {
+export const HeaderMenuOverlay = ({
+  isVisible,
+  setIsVisible,
+}: HeaderMenuOverlayProps) => {
   const t = useTranslations()
   const [locale, setLocale] = useChangeLocale()
 
@@ -37,7 +41,7 @@ export const HeaderMenuOverlay = ({ isVisible }: HeaderMenuOverlayProps) => {
           {HEADER_NAV_DATA.map((item, index) => {
             return (
               <li key={index} className={styles.link}>
-                <Link href={item.href}>
+                <Link onClick={() => setIsVisible(false)} href={item.href}>
                   <span className={'body2'}>{t(item.langKey)}</span>
                 </Link>
               </li>

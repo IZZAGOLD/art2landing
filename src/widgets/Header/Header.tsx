@@ -97,7 +97,10 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <HeaderMenuOverlay isVisible={isVisibleMenu} />
+      <HeaderMenuOverlay
+        setIsVisible={setIsVisibleMenu}
+        isVisible={isVisibleMenu}
+      />
     </>
   )
 }

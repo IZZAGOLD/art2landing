@@ -17,7 +17,7 @@ import { IconFigure } from '@ui/icons/Icon.Figure'
 
 export const SectionWhyArtSqrd = () => {
   const t = useTranslations()
-  const isDesktop = useMedia({ minWidth: '768px' })
+  const isDesktop = useMedia({ minWidth: '769px' })
 
   return (
     <section className={styles.wrapper}>
