@@ -25,7 +25,7 @@ export const Footer = () => {
   const isDesktop = useMedia({ minWidth: '768px' })
 
   return (
-    <footer className={styles.wrapper}>
+    <footer id={'footer'} className={styles.wrapper}>
       <div className={cn(styles.imageContainer, styles.background)}>
         <ExportedImage
           className={styles.image}

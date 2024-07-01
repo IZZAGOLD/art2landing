@@ -17,6 +17,6 @@ export const HEADER_NAV_DATA = [
   },
   {
     langKey: 'contacts',
-    href: '/#contacts',
+    href: '/#footer',
   },
 ]

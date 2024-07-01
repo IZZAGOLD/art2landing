@@ -74,6 +74,15 @@
     }
   }
 
+  @supports (animation: square-move 5s linear forwards) and (-webkit-transform: translateX(-50%)) and (animation-timeline: scroll()) and (animation-range: 0vh 90vh) {
+    .content {
+      animation: square-move 5s linear forwards;
+      -webkit-transform: translateX(-50%);
+      animation-timeline: scroll();
+      animation-range: 0vh 90vh;
+    }
+  }
+
   .content {
     display: flex;
     justify-content: center;
@@ -85,10 +94,6 @@
     z-index: 1;
     position: fixed;
     top: 96px;
-    animation: square-move 5s linear forwards;
-    -webkit-transform: translateX(-50%);
-    animation-timeline: scroll();
-    animation-range: 0vh 90vh;
 
     .videoWrapper {
       width: 37svh;
