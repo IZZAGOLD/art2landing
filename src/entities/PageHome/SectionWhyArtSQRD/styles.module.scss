@@ -10,7 +10,7 @@
   .figureWrapper {
     position: absolute;
     top: -56px;
-    left: 0;
+    left: -20px;
     height: 39svh;
 
     svg {
@@ -47,6 +47,7 @@
     bottom: 4vw;
     right: 0;
     width: 30vw;
+    
 
     @media (max-width: 768px) {
       display: none;
@@ -96,12 +97,34 @@
     top: 96px;
 
     .videoWrapper {
-      width: 37svh;
-      height: 37svh;
+      @media (orientation: portrait) {
+        width: calc(30svh - 40px);
+        height: calc(30svh - 40px);
 
-      @media (max-width: 1366px) {
-        width: 18.5svh;
-        height: 18.5svh;
+        @media (max-width: 1366px) {
+          width: calc(15svh - 40px);
+          height: calc(15svh - 40px);
+        }
+
+        @media (max-width: 768px) {
+          width: calc(25svh - 40px);
+          height: calc(25svh - 40px);
+        }
+      }
+
+      @media (orientation: landscape) {
+        width: calc(30svh - 40px);
+        height: calc(30svh - 40px);
+
+        @media (max-width: 1366px) {
+          width: calc(15svh - 40px);
+          height: calc(15svh - 40px);
+        }
+
+        @media (max-width: 768px) {
+          width: calc(25svh - 40px);
+          height: calc(25svh - 40px);
+        }
       }
 
       .video {
