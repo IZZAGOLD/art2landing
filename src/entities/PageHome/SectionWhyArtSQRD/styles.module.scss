@@ -47,7 +47,6 @@
     bottom: 4vw;
     right: 0;
     width: 30vw;
-    
 
     @media (max-width: 768px) {
       display: none;
@@ -97,6 +96,15 @@
     top: 96px;
 
     .videoWrapper {
+      width: calc(25svh - 40px);
+      height: calc(25svh - 40px);
+
+      @media (max-width: 1366px) {
+        width: calc(20svh - 40px);
+        height: calc(20svh - 40px);
+      }
+
+
       @media (orientation: portrait) {
         width: calc(30svh - 40px);
         height: calc(30svh - 40px);
@@ -112,19 +120,8 @@
         }
       }
 
-      @media (orientation: landscape) {
-        width: calc(30svh - 40px);
-        height: calc(30svh - 40px);
-
-        @media (max-width: 1366px) {
-          width: calc(15svh - 40px);
-          height: calc(15svh - 40px);
-        }
-
-        @media (max-width: 768px) {
-          width: calc(25svh - 40px);
-          height: calc(25svh - 40px);
-        }
+      @media (orientation: landscape) and (max-width: 1000px) {
+        display: none;
       }
 
       .video {
@@ -147,6 +144,10 @@
       justify-content: center;
       gap: 12px;
       flex-wrap: wrap;
+
+      @media (orientation: landscape) and (max-width: 1000px) {
+        display: none;
+      }
 
       .marketButton {
         min-width: 174px;
