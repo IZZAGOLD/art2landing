@@ -95,30 +95,42 @@
     position: fixed;
     top: 96px;
 
+    @media (max-width: 480px) {
+      top: 76px
+    }
+
     .videoWrapper {
-      width: calc(25svh - 40px);
-      height: calc(25svh - 40px);
+      width: 220px;
+      height: 220px;
 
-      @media (max-width: 1366px) {
-        width: calc(20svh - 40px);
-        height: calc(20svh - 40px);
+      @media (min-width: 1920px) {
+        width: 400px;
+        height: 400px;
       }
 
-
-      @media (orientation: portrait) {
-        width: calc(30svh - 40px);
-        height: calc(30svh - 40px);
-
-        @media (max-width: 1366px) {
-          width: calc(15svh - 40px);
-          height: calc(15svh - 40px);
-        }
-
-        @media (max-width: 768px) {
-          width: calc(25svh - 40px);
-          height: calc(25svh - 40px);
-        }
-      }
+      //width: calc(25svh - 40px);
+      //height: calc(25svh - 40px);
+      //
+      //@media (max-width: 1366px) {
+      //  width: calc(20svh - 40px);
+      //  height: calc(20svh - 40px);
+      //}
+      //
+      //
+      //@media (orientation: portrait) {
+      //  width: calc(30svh - 40px);
+      //  height: calc(30svh - 40px);
+      //
+      //  @media (max-width: 1366px) {
+      //    width: calc(15svh - 40px);
+      //    height: calc(15svh - 40px);
+      //  }
+      //
+      //  @media (max-width: 768px) {
+      //    width: calc(25svh - 40px);
+      //    height: calc(25svh - 40px);
+      //  }
+      //}
 
       @media (orientation: landscape) and (max-width: 1000px) {
         display: none;
@@ -136,6 +148,10 @@
       margin-top: 40px;
       text-transform: uppercase;
       text-align: center;
+
+      @media (max-width: 480px) {
+        margin-top: 30px;
+      }
     }
 
     .buttons {

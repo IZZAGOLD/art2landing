@@ -25,7 +25,13 @@ export const SectionVideo = () => {
   return (
     <section ref={ref} className={cn(styles.wrapper, 'section')}>
       <div className={styles.videoWrapper}>
-        <video className={styles.video} loop autoPlay muted playsInline>
+        <video
+          className={styles.video}
+          loop={true}
+          autoPlay={true}
+          muted={true}
+          playsInline={true}
+        >
           <source src={'./children_picture.mp4'} type='video/mp4' />
           <source src={'./children_picture.webm'} type='video/webm' />
         </video>
