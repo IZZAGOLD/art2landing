@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { SectionHeadingBlock } from '@ui/SectionHeadingBlock/SectionHeadingBlock'
 import { useTranslations } from 'next-intl'
 import ExportedImage from 'next-image-export-optimizer'
-import image from '@assets/img/mission.png'
+import image from '@assets/img/oon.png'
 import { IconHeart } from '@ui/icons/Icon.Heart'
 import { IconSimpleStar } from '@ui/icons/Icon.SimpleStar'
 
@@ -30,9 +30,9 @@ export const SectionMission = () => {
       </h2>
       <div className={styles.imageContainer}>
         <ExportedImage className={styles.image} src={image} alt={'missions'} />
+        <IconHeart className={styles.heart} />
       </div>
 
-      <IconHeart className={styles.heart} />
       <IconSimpleStar className={styles.star} />
     </section>
   )

@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   position: relative;
 
   @media (max-width: 480px) {
@@ -25,7 +25,8 @@
 
   .imageContainer {
     width: 100%;
-    max-width: 997px;
+    max-width: 940px;
+    position: relative;
 
     > div {
       position: unset !important;
@@ -38,22 +39,13 @@
       height: unset !important;
 
     }
-  }
 
-  .heart {
-    position: absolute;
-    left: 15%;
-    bottom: 10%;
-
-    @media (max-width: 1080px) {
-      bottom: 0
-    }
-
-    @media (max-width: 370px) {
-      display: none;
+    .heart {
+      position: absolute;
+      top: 0;
     }
   }
-
+  
   .star {
     position: absolute;
     right: 15%;
@@ -62,5 +54,9 @@
     @media (max-width: 400px) {
       right: 5%;
     }
+  }
+
+  @media (max-width: 480px) {
+    padding-bottom: 40px;
   }
 }

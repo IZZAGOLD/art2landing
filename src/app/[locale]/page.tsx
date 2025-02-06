@@ -3,14 +3,15 @@ import { LocaleProps } from '@lib/internalization/types/types.internalization'
 import { PageWrapper } from '@ui/PageWrapper/PageWrapper'
 import { Metadata } from 'next'
 import { SITE_URL } from '@shared/appSettings/index.appSettings'
-import { Suspense } from 'react'
-import { SectionCoreIdea } from '@/entities/PageHome/SectionCoreIdea/SectionCoreIdea'
+import { SectionDonations } from '@/entities/PageHome/SectionDonations/SectionDonations'
 import { SectionMission } from '@/entities/PageHome/SectionMission/SectionMission'
 import { SectionWhyArtSqrd } from '@/entities/PageHome/SectionWhyArtSQRD/SectionWhyArtSQRD'
 import { SectionCards } from '@/entities/PageHome/SectionCards/SectionCards'
 import { SectionVideo } from '@/entities/PageHome/SectionVideo/SectionVideo'
 import { SectionFeedBack } from '@/entities/PageHome/SectionFeedBack/SectionFeedBack'
 import { SectionOpinion } from '@/entities/PageHome/SectionOpinion/SectionOpinion'
+import { SectionCoreIdea } from '@/entities/PageHome/SectionCoreIdea/SectionCoreIdea'
+import { Suspense } from 'react'
 
 export async function generateMetadata({
   params: { locale },
@@ -36,6 +37,7 @@ export default function Home({ params }: LocaleProps) {
       <SectionWhyArtSqrd />
       <SectionCards />
       <SectionCoreIdea />
+      <SectionDonations />
       <SectionMission />
       <Suspense>
         <SectionVideo />
